@@ -9,10 +9,17 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-    <h1 class="title flex justify-center mt-40">h1タイトルです</h1>
-    <figure>
-        <img src="images/Body.webp" alt="">
-    </figure>
+    <button data-micromodal-trigger="modal" role="button">モーダルを開く</button>
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header>
+            <button aria-label="Close modal" data-micromodal-close>閉じる</button>
+          </header>
+          <div id="modal__container"><video src="./images/movie.mp4" autoplay muted controls playsinline preload width="800" height="800"></video></div>
+        </div>
+      </div>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>

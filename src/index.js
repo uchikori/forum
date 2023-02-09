@@ -1,6 +1,9 @@
-import bar from './bar.js';
+import Micromodal from "micromodal";
 import "./scss/style.scss";
-const foo = require('./foo.js');
 
-bar();
-foo();
+window.addEventListener('load', () => {
+  Micromodal.show('modal')
+})
+Micromodal.init({
+  disableScroll: true,
+});
